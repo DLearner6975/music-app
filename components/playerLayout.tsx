@@ -1,6 +1,6 @@
-import { Box } from "@chakra-ui/layout";
-import { FC } from "react";
-import Sidebar from "./sidebar";
+import { Box } from '@chakra-ui/layout';
+import { FC } from 'react';
+import Sidebar from './sidebar';
 
 interface IPlayerLayoutProps {}
 
