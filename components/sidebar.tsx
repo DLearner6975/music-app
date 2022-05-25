@@ -52,9 +52,9 @@ const musicMenu = [
   },
 ];
 
-const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`);
 const Sidebar: FC<ISidebarProps> = (props) => {
   const { playlists } = usePlaylist();
+
   return (
     <Box
       width="100%"
@@ -91,7 +91,6 @@ const Sidebar: FC<ISidebarProps> = (props) => {
           <List spacing={2}>
             {musicMenu.map((menu) => (
               <ListItem paddingX="20px">
-                {' '}
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
                     <LinkOverlay>
@@ -111,7 +110,7 @@ const Sidebar: FC<ISidebarProps> = (props) => {
         <Divider bg="gray.800" />
         <Box height="66%" overflowY="auto" paddingY="20px">
           <List spacing={2}>
-            {playlists.map((playlist) => (
+            {playlists?.map((playlist) => (
               <ListItem paddingX="20px" key={playlist.id}>
                 <LinkBox>
                   <NextLink href="/" passHref>
